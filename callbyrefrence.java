@@ -1,0 +1,23 @@
+class Test{
+int a, b ;
+   Test( int i ,int j)
+  {
+            a=i;
+            b=j;
+  }
+    void meth(Test o)
+   {
+     o.a *=2;
+     o.b /=2;
+   }
+}
+class callbyrefrence{
+  public static void main(String arg[])
+  {
+    Test ob =new Test(15,20);
+   System.out.println("ob.a and ob.b before calling is :" +ob.a +" "+ob.b);
+   ob.meth(ob); 
+   System.out.println("ob.a and ob.b after calling is :" +ob.a +" "+ob.b);
+   }
+}
+    
