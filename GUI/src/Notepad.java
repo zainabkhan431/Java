@@ -1,0 +1,65 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+public class Notepad extends JFrame {
+    public static void main(String arg[])
+    {
+        JFrame frm = new JFrame("NotePad");
+        Container con = frm.getContentPane();
+        JMenuBar menu = new JMenuBar( );
+        JScrollPane s = new JScrollPane();
+        frm.add(s);
+        JMenu x = new JMenu("File");
+        JMenu y = new JMenu("Edit");
+        JMenu z = new JMenu("Format");
+        JMenu v = new JMenu("View");
+        JMenu w = new JMenu("Help");
+        JMenuItem m1, m2 , m3,m4,m5 ;
+        JMenuItem z1,z2,z3,z4,z5 ;
+        JMenuItem a1,a2;
+        JMenuItem b1,b2;
+        JMenuItem c1,c2,c3;
+        m1= new JMenuItem("New");
+        m2= new JMenuItem("New Window");
+        m3= new JMenuItem("Open");
+        m4= new JMenuItem("Save As");
+        m5= new JMenuItem("Save");
+        z1= new JMenuItem("Undo");
+        z2= new JMenuItem("Cut");
+        z3= new JMenuItem("Copy");
+        z4= new JMenuItem("Paste");
+        z5= new JMenuItem("Delete");
+        a1= new JMenuItem("Word Wrap");
+        a2= new JMenuItem("Font Size");
+        b1= new JMenuItem("Zoom");
+        b2= new JMenuItem("Status Bar");
+        c1= new JMenuItem("View Help");
+        c2= new JMenuItem("Send Feedback");
+        c3= new JMenuItem("About Notepad");
+        x.add(m1);
+        x.add(m2);
+        x.add(m3);
+        x.add(m4);
+        x.add(m5);
+        y.add(z1);
+        y.add(z2);
+        y.add(z3);
+        y.add(z4);
+        y.add(z5);
+        z.add(a1);
+        z.add(a2);
+        v.add(b1);
+        v.add(b2);
+        w.add(c1);
+        w.add(c2);
+        w.add(c3);
+       menu.add(x);
+       menu.add(y);
+       menu.add(z);
+       menu.add(v);
+       menu.add(w);
+       frm.setJMenuBar(menu);
+       frm.setSize(500,500);
+       frm.setVisible(true);
+   }
+}
