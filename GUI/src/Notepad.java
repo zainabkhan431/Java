@@ -1,14 +1,16 @@
 import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
-public class Notepad extends JFrame {
+
+public class Notepad {
+   static  JTextArea jt;
     public static void main(String arg[])
     {
         JFrame frm = new JFrame("NotePad");
         Container con = frm.getContentPane();
         JMenuBar menu = new JMenuBar( );
-        JScrollPane s = new JScrollPane();
-        frm.add(s);
+        ImageIcon image = new ImageIcon("C:\\Users\\Khizar\\Desktop\\notepad.png");
+        frm.setIconImage(image.getImage());
+        //JTextArea jt;
         JMenu x = new JMenu("File");
         JMenu y = new JMenu("Edit");
         JMenu z = new JMenu("Format");
@@ -53,13 +55,17 @@ public class Notepad extends JFrame {
         w.add(c1);
         w.add(c2);
         w.add(c3);
+        jt= new JTextArea(500,500);
+        jt.setFont(new Font("Arial", Font.PLAIN, 20));
        menu.add(x);
        menu.add(y);
        menu.add(z);
        menu.add(v);
        menu.add(w);
+       frm.add(jt);
        frm.setJMenuBar(menu);
        frm.setSize(500,500);
+       frm.setBackground(Color.gray);
        frm.setVisible(true);
    }
 }
